@@ -1,0 +1,15 @@
+app:
+  discord:
+    api-url: "https://discord.com/api/v9"
+    bot-token: "<discord_bot_token>"
+    channel-id: "<channel_id_to_update>"
+  rcon:
+    host: "<server_ip>"
+    port: 2305
+    password: "<rcon_pass>"
+
+logging:
+  level:
+    org:
+      slorinc:  DEBUG
+
