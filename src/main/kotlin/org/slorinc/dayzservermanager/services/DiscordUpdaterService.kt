@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class DiscordUpdaterService(
-    val battlEyeRconClient: BattlEyeRconClient,
+    val battlEyeRconClient: BattleyeRconClient,
     val discordGateway: DiscordGateway
 ): Logging {
 

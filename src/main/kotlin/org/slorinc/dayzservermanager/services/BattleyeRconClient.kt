@@ -21,7 +21,7 @@ import java.util.zip.CRC32
 
 
 @Service
-class BattlEyeRconClient(
+class BattleyeRconClient(
     val rconProperties: RconProperties
 ) : Logging {
 

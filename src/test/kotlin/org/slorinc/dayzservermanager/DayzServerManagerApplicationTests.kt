@@ -1,15 +1,22 @@
 package org.slorinc.dayzservermanager
 
-import com.ninjasquad.springmockk.MockkBean
+import io.mockk.every
+import io.mockk.impl.annotations.MockK
 import org.junit.jupiter.api.Test
-import org.slorinc.dayzservermanager.services.BattlEyeRconClient
+import org.slorinc.dayzservermanager.services.BattleyeRconClient
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.event.annotation.BeforeTestClass
 
 @SpringBootTest
 class DayzServerManagerApplicationTests {
 
-    @MockkBean
-    lateinit var battlEyeRconClient: BattlEyeRconClient
+    @MockK
+    lateinit var battleyeRconClient: BattleyeRconClient
+
+    @BeforeTestClass
+    internal fun setUp() {
+        every { battleyeRconClient.onStartUp() } returns Unit
+    }
 
     @Test
     fun contextLoads() {

@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.responses.ApiResponses
 import org.apache.logging.log4j.kotlin.Logging
-import org.slorinc.dayzservermanager.services.BattlEyeRconClient
+import org.slorinc.dayzservermanager.services.BattleyeRconClient
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @CrossOrigin
 @RequestMapping("/rcon")
-class RConController(val battlEyeRconClient: BattlEyeRconClient) : Logging {
+class RConController(val battlEyeRconClient: BattleyeRconClient) : Logging {
 
     @PostMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
     @Operation(summary = "Get player count", description = "Get player count")
